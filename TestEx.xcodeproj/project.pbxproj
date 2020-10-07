@@ -12,6 +12,9 @@
 		F20F0985252DBA0D0076ED5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20F0984252DBA0D0076ED5F /* Assets.xcassets */; };
 		F20F0988252DBA0D0076ED5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20F0986252DBA0D0076ED5F /* LaunchScreen.storyboard */; };
 		F20F09A0252DD1080076ED5F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F20F099F252DD1080076ED5F /* .gitignore */; };
+		F20F09A2252DDDDE0076ED5F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A1252DDDDE0076ED5F /* ListViewController.swift */; };
+		F20F09A4252DDDF00076ED5F /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A3252DDDF00076ED5F /* ListViewCell.swift */; };
+		F20F09A6252DF5F70076ED5F /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A5252DF5F70076ED5F /* CellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		F20F0987252DBA0D0076ED5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F20F0989252DBA0D0076ED5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F20F099F252DD1080076ED5F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F20F09A1252DDDDE0076ED5F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F20F09A3252DDDF00076ED5F /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		F20F09A5252DF5F70076ED5F /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +44,9 @@
 		F20F096F252DBA090076ED5F = {
 			isa = PBXGroup;
 			children = (
-				F20F099F252DD1080076ED5F /* .gitignore */,
 				F20F097A252DBA090076ED5F /* TestEx */,
 				F20F0979252DBA090076ED5F /* Products */,
+				F20F099F252DD1080076ED5F /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +125,7 @@
 		F20F0996252DC68C0076ED5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F20F09A1252DDDDE0076ED5F /* ListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 		F20F0997252DC6930076ED5F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F20F09A3252DDDF00076ED5F /* ListViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 		F20F0998252DC6980076ED5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F20F09A5252DF5F70076ED5F /* CellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,7 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20F09A2252DDDDE0076ED5F /* ListViewController.swift in Sources */,
+				F20F09A4252DDDF00076ED5F /* ListViewCell.swift in Sources */,
 				F20F097C252DBA0A0076ED5F /* AppDelegate.swift in Sources */,
+				F20F09A6252DF5F70076ED5F /* CellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
