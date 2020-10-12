@@ -14,7 +14,8 @@
 		F20F09A0252DD1080076ED5F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F20F099F252DD1080076ED5F /* .gitignore */; };
 		F20F09A2252DDDDE0076ED5F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A1252DDDDE0076ED5F /* ListViewController.swift */; };
 		F20F09A4252DDDF00076ED5F /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A3252DDDF00076ED5F /* ListViewCell.swift */; };
-		F20F09A6252DF5F70076ED5F /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A5252DF5F70076ED5F /* CellModel.swift */; };
+		F20F09A6252DF5F70076ED5F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A5252DF5F70076ED5F /* Models.swift */; };
+		F20F09A8252E25ED0076ED5F /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F09A7252E25ED0076ED5F /* Links.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		F20F099F252DD1080076ED5F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F20F09A1252DDDDE0076ED5F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F20F09A3252DDDF00076ED5F /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
-		F20F09A5252DF5F70076ED5F /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		F20F09A5252DF5F70076ED5F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F20F09A7252E25ED0076ED5F /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		F20F0994252DC3EB0076ED5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F20F09A7252E25ED0076ED5F /* Links.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,7 +144,7 @@
 		F20F0998252DC6980076ED5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F20F09A5252DF5F70076ED5F /* CellModel.swift */,
+				F20F09A5252DF5F70076ED5F /* Models.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Александр Шубский";
 				TargetAttributes = {
 					F20F0977252DBA090076ED5F = {
@@ -249,10 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20F09A8252E25ED0076ED5F /* Links.swift in Sources */,
 				F20F09A2252DDDDE0076ED5F /* ListViewController.swift in Sources */,
 				F20F09A4252DDDF00076ED5F /* ListViewCell.swift in Sources */,
 				F20F097C252DBA0A0076ED5F /* AppDelegate.swift in Sources */,
-				F20F09A6252DF5F70076ED5F /* CellModel.swift in Sources */,
+				F20F09A6252DF5F70076ED5F /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -328,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,6 +369,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -382,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -399,7 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F9F46G26Q;
 				INFOPLIST_FILE = "TestEx/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F9F46G26Q;
 				INFOPLIST_FILE = "TestEx/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
