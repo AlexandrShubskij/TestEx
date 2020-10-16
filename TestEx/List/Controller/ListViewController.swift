@@ -54,16 +54,11 @@ class ListViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async{
-            self.ListTableView.reloadData()
-        }
-        
         
         searchTextField.isHidden = true
         searchTextField.isEnabled = false
         
         self.searchTextField.delegate = self
-        
         
     }
 
@@ -90,11 +85,12 @@ class ListViewController: UITableViewController, UITextFieldDelegate{
             return UITableViewCell()
         }
         
-        
+        tableViewCell.videoImage?.isHidden = false
+        tableViewCell.videoNameText?.textAlignment = .left
         tableViewCell.videoNameText?.font = UIFont.systemFont(ofSize: 15)
         tableViewCell.videoNameText?.numberOfLines = 0
-        
-
+        tableViewCell.accessoryType = .disclosureIndicator
+        tableViewCell.selectionStyle = .default
         
         
         
@@ -109,11 +105,13 @@ class ListViewController: UITableViewController, UITextFieldDelegate{
             return tableViewCell
         }
         
+        
+        
         let result = self.videoList[indexPath.row]
         
-        print(result.id)
         
         tableViewCell.videoNameText?.text = "\(result.videoName)"
+        tableViewCell.videoImage?.image = UIImage(url: URL(string: "\(result.videoImageURL)"))
         
         
 
@@ -140,6 +138,8 @@ class ListViewController: UITableViewController, UITextFieldDelegate{
     func textFieldShouldReturn(_ searchBar: UITextField) -> Bool {
         var text = searchVideo()
         
+        self.videoList.removeAll()
+        
         text = text.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
         
         let url = ReturnLink.returnSearchLink(text: text)
@@ -157,12 +157,13 @@ class ListViewController: UITableViewController, UITextFieldDelegate{
                         let idInfoDict = item["id"] as! [String: AnyObject]
 
                         let videoID = idInfoDict["videoId"] as! String
+                        
 
                         let snippetDict = item["snippet"] as! [String: AnyObject]
 
                         let title = snippetDict["title"] as! String
 
-                        
+                    
                         let thumbnailsDict = snippetDict["thumbnails"] as! [String: AnyObject]
 
                         let mediumImageDict = thumbnailsDict["medium"] as! [String: AnyObject]
@@ -171,11 +172,11 @@ class ListViewController: UITableViewController, UITextFieldDelegate{
 
                         
                         let cellContent = SearchModel(videoImageURL: videoImageUrl, videoName: title, id: videoID)
-//                        print (cellContent)
+                        
                         self.videoList.append(cellContent)
                         
                     }
-                    print(self.videoList)
+                    self.tableView.reloadData()
                 }
                 
             } catch let error as NSError {

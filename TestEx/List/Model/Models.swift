@@ -11,17 +11,9 @@ import UIKit
 
 
 struct SearchModel {
-    var videoImageURL: String
-    var videoName: String
-    var id: String
-    
-    init (videoImageURL: String, videoName: String, id:String) {
-        self.videoImageURL = videoImageURL
-        self.videoName = videoName
-        self.id = id
-    }
-    
-    
+    public var videoImageURL: String
+    public var videoName: String
+    public var id: String
 }
 
 
